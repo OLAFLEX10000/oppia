@@ -38,6 +38,7 @@ import {ReleaseCoordinatorFactory} from '../user/release-coordinator';
 import {BlogAdmin, BlogAdminFactory} from '../user/blog-admin';
 import {BlogPostEditorFactory} from '../user/blog-post-editor';
 import {TopicManager, TopicManagerFactory} from '../user/topic-manager';
+import {ModeratorFactory} from '../user/moderator';
 
 const ROLES = testConstants.Roles;
 const cookieBannerAcceptButton =
@@ -55,6 +56,7 @@ const USER_ROLE_MAPPING = {
   [ROLES.RELEASE_COORDINATOR]: ReleaseCoordinatorFactory,
   [ROLES.TOPIC_MANAGER]: TopicManagerFactory,
   [ROLES.VOICEOVER_ADMIN]: VoiceoverAdminFactory,
+  [ROLES.MODERATOR]: ModeratorFactory,
 } as const;
 
 // Roles that are not reflected on the admin page after assignment.
